@@ -42,7 +42,7 @@ public class Server{
 
 
 				while(true) {
-					ClientThread c = new ClientThread(mysocket.accept(), count, <username>);
+					ClientThread c = new ClientThread(mysocket.accept(), count, "username");
 					callback.accept(c.getUsername() + " has connected to server");
 //					callback.accept("client has connected to server: " + "client #" + count);
 					clients.add(c);
